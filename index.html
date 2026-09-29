@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Zayd, Barrister. Entertainment and media law for artists, songwriters, labels and publishers. London and Los Angeles.">
+<meta name="description" content="Zayd, Barrister. Entertainment and media law for artists, songwriters, influencers, labels and publishers. London and Los Angeles.">
 <meta property="og:image" content="https://zayd-legal.co.uk/barrister.webp">
 <title>Zayd Legal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,6 +103,11 @@ section{padding-block:clamp(56px,8vw,100px)}
 .filters{display:flex;gap:8px;flex-wrap:wrap}
 .chipbtn{border:1px solid var(--rule);background:var(--surface);border-radius:999px;padding:7px 15px;font-size:.88rem}
 .chipbtn[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:var(--r);overflow:hidden}
+.svc{background:var(--surface);padding:26px 24px;min-width:0;transition:background .15s}
+.svc:hover{background:var(--paper)}
+.svc h3{font-size:1.45rem;margin-bottom:8px}
+.svc p{margin:0;color:var(--muted);font-size:.95rem}
 .record{list-style:none;margin:0;padding:0;display:grid;gap:12px}
 .record li{display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:20px;align-items:center;background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);padding:18px 22px}
 .record .where{font-family:var(--f-mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--tape)}
@@ -137,6 +142,7 @@ footer p{margin:0;max-width:46em}
   .hero,.practice,.contact{grid-template-columns:1fr}
   .hero .portrait{max-width:440px}
   .approach .a1,.approach .a2{grid-column:1/-1}
+  .services{grid-template-columns:repeat(2,minmax(0,1fr))}
   .approach .a1{aspect-ratio:4/5;max-width:440px}
 }
 @media (max-width:620px){
@@ -144,6 +150,7 @@ footer p{margin:0;max-width:46em}
   .links a{display:none}
   .record li{grid-template-columns:1fr;gap:4px}
   .row{grid-template-columns:1fr}
+  .services{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -154,7 +161,7 @@ footer p{margin:0;max-width:46em}
     <a class="mark" href="#top">Zayd<i>.</i></a>
     <div class="links">
       <a href="#practice">Practice</a>
-      <a href="#approach">Approach</a>
+      <a href="#services">Services</a>
       <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
       <button class="icon-btn" id="theme" aria-label="Switch light or dark theme">
@@ -167,7 +174,7 @@ footer p{margin:0;max-width:46em}
     <div>
       <span class="mono eyebrow">Barrister · Entertainment &amp; Media Law</span>
       <h1>Counsel for the people who <em>make</em> the music.</h1>
-      <p class="lede">I advise artists, songwriters, labels, publishers and production companies on the deals that shape a career, and act for them when those deals break down. Called to the Bar of England &amp; Wales, with in-house label experience in Los Angeles.</p>
+      <p class="lede">I represent artists, songwriters, influencers and content creators, and advise labels, publishers and production companies on the deals that shape a career, and act for them when those deals break down. Called to the Bar of England &amp; Wales, with in-house label experience in Los Angeles.</p>
       <div class="cta">
         <a class="btn primary" href="#contact">Get in touch →</a>
         <a class="btn" href="#practice">Areas of practice</a>
@@ -199,6 +206,21 @@ footer p{margin:0;max-width:46em}
           <ul id="panel-list"></ul>
         </div>
       </article>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="shead">
+      <div><span class="mono eyebrow">Services</span><h2>Work I take on</h2></div>
+      <p>Available for one-off matters and ongoing work, in London, Los Angeles or remotely. Fees are agreed upfront and fixed where possible.</p>
+    </div>
+    <div class="services">
+      <div class="svc"><h3>Contract review &amp; drafting</h3><p>Record, publishing, management, brand and sponsorship agreements, checked or drafted from scratch.</p></div>
+      <div class="svc"><h3>Deal negotiation</h3><p>Negotiating terms with labels, publishers, brands and agencies so you sign on fair terms.</p></div>
+      <div class="svc"><h3>Written advice</h3><p>Clear opinions on rights, contracts and prospects, plus rights and catalogue due diligence.</p></div>
+      <div class="svc"><h3>Disputes &amp; advocacy</h3><p>Letters before claim, settlement negotiations, mediation and representation in court.</p></div>
+      <div class="svc"><h3>Ongoing retainer</h3><p>A monthly arrangement for artists, influencers, managers and independent labels who need regular advice.</p></div>
+      <div class="svc"><h3>Talks &amp; training</h3><p>Sessions for artists, creators, managers and agencies on contracts, rights and advertising rules.</p></div>
     </div>
   </section>
 
@@ -263,10 +285,10 @@ footer p{margin:0;max-width:46em}
         </div>
         <div class="row">
           <label for="f-role">You are
-            <select id="f-role" name="role"><option>An artist or songwriter</option><option>A label or publisher</option><option>A manager or agency</option><option>A solicitor instructing counsel</option><option>Other</option></select>
+            <select id="f-role" name="role"><option>An artist or songwriter</option><option>An influencer or content creator</option><option>A label or publisher</option><option>A manager or agency</option><option>A solicitor instructing counsel</option><option>Other</option></select>
           </label>
           <label for="f-type">Matter
-            <select id="f-type" name="type"><option>Contract review or drafting</option><option>Dispute or claim</option><option>Copyright or royalties</option><option>General advice</option></select>
+            <select id="f-type" name="type"><option>Contract review or drafting</option><option>Dispute or claim</option><option>Brand or sponsorship deal</option><option>Copyright or royalties</option><option>Ongoing retainer</option><option>General advice</option></select>
           </label>
         </div>
         <label for="f-msg">Summary<textarea id="f-msg" name="message" placeholder="Who is involved, what has happened, and any dates I should know about." required></textarea></label>
@@ -289,9 +311,10 @@ const AREAS=[
  {tag:"Music",title:"Recording & distribution",text:"Record, licence and distribution deals, negotiated from either side of the table.",items:["Term & options","Recoupment","Key-person clauses","Rights reversion"],ph:"Studio / vinyl photo"},
  {tag:"Music",title:"Publishing & royalties",text:"Publishing and co-writing agreements, split disputes and claims over unpaid royalties.",items:["Co-writer splits","Admin deals","Royalty audits","Accounting claims"],ph:"Songwriting photo"},
  {tag:"IP",title:"Copyright & infringement",text:"Ownership, authorship and infringement disputes over songs, recordings and samples.",items:["Sample clearance","Interpolations","Authorship","Takedowns"],ph:"Recording session photo"},
+ {tag:"Influencers",title:"Influencers & creators",text:"Representation for influencers, content creators and streamers, from the first brand deal to disputes with agencies and platforms.",items:["Brand & sponsorship deals","Agency & management contracts","Ad disclosure (ASA / CAP / FTC)","Image rights & likeness","Content ownership","Platform & agency disputes"],ph:""},
  {tag:"Talent",title:"Management disputes",text:"Artist and manager agreements, and what happens when the relationship ends.",items:["Post-term commission","Undue influence","Restraint of trade","Exit terms"],ph:"Live performance photo"},
  {tag:"Film & TV",title:"Sync & licensing",text:"Getting music cleared and licensed for film, TV, games and advertising.",items:["Sync licences","Clearances","Option agreements","Soundtracks"],ph:"Film set photo"},
- {tag:"Digital",title:"Creators & platforms",text:"Creator agreements, catalogue acquisitions and emerging questions around AI.",items:["Creator deals","Catalogue due diligence","AI & likeness","Platform terms"],ph:"Creator / digital photo"}
+ {tag:"Digital",title:"Platforms & AI",text:"Catalogue acquisitions, platform terms and new questions about AI and digital rights.",items:["Catalogue due diligence","AI & likeness","Platform terms","Data & licensing"],ph:""}
 ];
 const tabs=document.getElementById('tabs');
 AREAS.forEach((a,i)=>{
