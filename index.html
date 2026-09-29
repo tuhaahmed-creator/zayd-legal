@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Zayd, Barrister. Entertainment and media law for artists, songwriters, labels and publishers. London and Los Angeles.">
+<meta property="og:image" content="https://zayd-legal.co.uk/barrister.webp">
 <title>Zayd Legal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,11 +54,6 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(-
 /* Image frames */
 .frame{position:relative;overflow:hidden;background:var(--img);border-radius:var(--r);max-width:100%;isolation:isolate}
 .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.frame .ph{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--muted);padding:20px}
-.frame .ph svg{width:44px;height:44px;opacity:.5;margin:0 auto 10px;display:block}
-.frame .swap{position:absolute;right:12px;bottom:12px;z-index:2;background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:7px 13px;font-size:.8rem;opacity:.92}
-.frame figcaption{position:absolute;left:12px;bottom:12px;z-index:2;background:var(--surface);padding:6px 10px;border-radius:999px;font-size:.78rem}
-.frame.has-img .ph{display:none}
 
 /* Hero */
 .hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(40px,7vw,88px)}
@@ -70,7 +66,7 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(-
 .facts b{font-family:var(--f-display);font-weight:400;font-size:1.6rem;line-height:1.1}
 .facts span{color:var(--muted);font-size:.86rem}
 .portrait{aspect-ratio:4/5}
-.tape{position:absolute;z-index:3;left:-12%;top:9%;width:62%;height:26px;background:var(--tape);transform:rotate(-38deg);box-shadow:0 6px 14px -8px rgba(0,0,0,.5)}
+.tape{position:absolute;z-index:3;right:-14%;bottom:11%;width:62%;height:26px;background:var(--tape);transform:rotate(-38deg);box-shadow:0 6px 14px -8px rgba(0,0,0,.5)}
 
 /* Sections */
 section{padding-block:clamp(56px,8vw,100px)}
@@ -85,7 +81,6 @@ section{padding-block:clamp(56px,8vw,100px)}
 .tab:hover{color:var(--ink)}
 .tab[aria-selected="true"]{color:var(--ink);padding-left:14px;box-shadow:inset 3px 0 0 var(--tape)}
 .panel{background:var(--surface);border:1px solid var(--rule);border-radius:var(--r);overflow:hidden;min-width:0}
-.panel .frame{aspect-ratio:16/9;border-radius:0}
 .panel .body{padding:clamp(20px,3vw,32px)}
 .panel h3{font-size:1.9rem;margin-bottom:10px}
 .panel p{color:var(--muted);margin:0 0 18px}
@@ -97,12 +92,12 @@ section{padding-block:clamp(56px,8vw,100px)}
 /* Approach */
 .approach{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(16px,2.5vw,28px);align-items:center}
 .approach .a1{grid-column:1/6;aspect-ratio:3/4}
+.approach .a1 img{object-position:50% 20%}
+.headshot{width:112px;height:112px;border-radius:50%;object-fit:cover;display:block;margin-bottom:22px;border:3px solid var(--paper);box-shadow:0 0 0 1px var(--rule)}
 .approach .a2{grid-column:6/13}
 .approach .quote{font-family:var(--f-display);font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.15;margin:0 0 22px}
 .approach .quote span{color:var(--tape)}
 .approach p{max-width:34em;color:var(--muted);margin:0 0 14px}
-.strip{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
-.strip .frame{aspect-ratio:4/3}
 
 /* Experience */
 .filters{display:flex;gap:8px;flex-wrap:wrap}
@@ -142,7 +137,7 @@ footer p{margin:0;max-width:46em}
   .hero,.practice,.contact{grid-template-columns:1fr}
   .hero .portrait{max-width:440px}
   .approach .a1,.approach .a2{grid-column:1/-1}
-  .approach .a1{aspect-ratio:16/10}
+  .approach .a1{aspect-ratio:4/5;max-width:440px}
 }
 @media (max-width:620px){
   body{font-size:16px}
@@ -150,7 +145,6 @@ footer p{margin:0;max-width:46em}
   .record li{grid-template-columns:1fr;gap:4px}
   .row{grid-template-columns:1fr}
 }
-.frame .swap{display:none}
 </style>
 </head>
 <body>
@@ -186,8 +180,7 @@ footer p{margin:0;max-width:46em}
     </div>
     <figure class="frame portrait" data-frame style="margin:0">
       <div class="tape" aria-hidden="true"></div>
-      <div class="ph"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg><span class="mono">Portrait photo</span></div></div>
-      <button class="swap" type="button">Add photo</button>
+      <img src="barrister.webp" alt="Zayd in barrister's wig and gown in chambers" width="640" height="800" fetchpriority="high">
     </figure>
   </header>
 
@@ -199,10 +192,6 @@ footer p{margin:0;max-width:46em}
     <div class="practice">
       <div class="tabs" role="tablist" aria-label="Practice areas" id="tabs"></div>
       <article class="panel" role="tabpanel" id="panel" aria-live="polite">
-        <figure class="frame" data-frame style="margin:0">
-          <div class="ph"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="m21 17-5-5-8 7"/></svg><span class="mono" id="panel-ph">Image</span></div></div>
-          <button class="swap" type="button">Add photo</button>
-        </figure>
         <div class="body">
           <span class="mono eyebrow" id="panel-tag"></span>
           <h3 id="panel-title"></h3>
@@ -216,18 +205,13 @@ footer p{margin:0;max-width:46em}
   <section id="approach">
     <div class="approach">
       <figure class="frame a1" data-frame style="margin:0">
-        <div class="ph"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span class="mono">Studio / performance photo</span></div></div>
-        <button class="swap" type="button">Add photo</button>
+        <img src="event.webp" alt="Zayd in black tie at an industry event" width="540" height="720" loading="lazy">
       </figure>
       <div class="a2">
         <span class="mono eyebrow">Approach</span>
         <p class="quote">I write and release my own songs, so I read a contract <span>the way an artist lives it.</span></p>
         <p>Alongside my practice I am an independent singer-songwriter. I know what a deal means in the studio, on the release schedule and on the royalty statement.</p>
         <p>I have sat on the label side too, as an in-house lawyer at record labels in Los Angeles. That means advice that is legally rigorous, commercially realistic and written in plain English.</p>
-        <div class="strip">
-          <figure class="frame" data-frame style="margin:0"><div class="ph"><span class="mono">London photo</span></div><button class="swap" type="button">Add photo</button></figure>
-          <figure class="frame" data-frame style="margin:0"><div class="ph"><span class="mono">Los Angeles photo</span></div><button class="swap" type="button">Add photo</button></figure>
-        </div>
       </div>
     </div>
   </section>
@@ -262,6 +246,7 @@ footer p{margin:0;max-width:46em}
   <section id="contact">
     <div class="contact">
       <div>
+        <img class="headshot" src="headshot.webp" alt="Zayd" width="360" height="360" loading="lazy">
         <span class="mono eyebrow">Contact</span>
         <h2>Tell me about your matter</h2>
         <p style="color:var(--muted);margin:16px 0 0;max-width:30em">A short summary, the parties involved and any deadlines is all I need to start. Everything you send is treated as confidential.</p>
@@ -297,7 +282,6 @@ footer p{margin:0;max-width:46em}
     <span class="mono">© 2026 zayd-legal.co.uk</span>
   </footer>
 </div>
-<input type="file" id="picker" accept="image/*" hidden>
 <div class="toast" id="toast" hidden role="status"></div>
 
 <script>
@@ -324,7 +308,6 @@ function select(i){
   document.getElementById('panel-tag').textContent=a.tag;
   document.getElementById('panel-title').textContent=a.title;
   document.getElementById('panel-text').textContent=a.text;
-  document.getElementById('panel-ph').textContent=a.ph;
   document.getElementById('panel-list').innerHTML=a.items.map(x=>'<li>'+x+'</li>').join('');
   const p=document.getElementById('panel').querySelector('.body');p.classList.remove('fade');void p.offsetWidth;p.classList.add('fade');
 }
@@ -336,17 +319,6 @@ document.querySelectorAll('.chipbtn').forEach(b=>b.onclick=()=>{
   const f=b.dataset.f;
   document.querySelectorAll('#record li').forEach(li=>li.hidden=!(f==='all'||li.dataset.c===f));
 });
-
-// Image frames: preview your own photos
-const picker=document.getElementById('picker');let target=null;
-document.querySelectorAll('[data-frame] .swap').forEach(btn=>btn.onclick=()=>{target=btn.closest('[data-frame]');picker.value='';picker.click();});
-picker.onchange=()=>{
-  const f=picker.files[0];if(!f||!target)return;
-  const url=URL.createObjectURL(f);
-  let img=target.querySelector('img');
-  if(!img){img=document.createElement('img');img.alt='';target.prepend(img);}
-  img.src=url;target.classList.add('has-img');target.querySelector('.swap').textContent='Change photo';
-};
 
 // Theme toggle
 document.getElementById('theme').onclick=()=>{
